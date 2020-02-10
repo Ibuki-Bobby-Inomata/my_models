@@ -2,8 +2,6 @@ import tensorflow as tf
 keras = tf.keras
 
 
-
-
 class WavenetResidualLayer(tf.keras.layers.Layer):
     def __init__(self, times):
         super(WavenetResidualLayer, self).__init__()
@@ -25,7 +23,7 @@ class WavenetResidualLayer(tf.keras.layers.Layer):
 class WaveNetModule(tf.keras.models.Model):
     def __init__(self):
         super(WaveNetModule, self).__init__()
-        self.causal_conv = tf.keras.layers.Conv1D(filters=64, kernel_size=3, padding='causal')
+        self.causal_conv = tf.keras.layers.Conv1D(filters=64, kernel_size=3, input_shape=(35, 1),padding='causal')
 
         self.waves = {}
         for i in range(1, 4):
