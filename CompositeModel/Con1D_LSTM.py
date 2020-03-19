@@ -36,5 +36,5 @@ com_model = tf.keras.layers.Dense(class_num, activation='sigmoid')(com_model)
 
 # モデル定義とコンパイル
 model = Model(inputs=[acc_gy.input, beacon.input], outputs=com_model)
-model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['acc'])
+model.compile(loss='sparse_categorical_crossentropy', optimizer='adam', metrics=['acc'])
 model.summary()
