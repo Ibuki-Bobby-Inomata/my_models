@@ -28,3 +28,7 @@ model.fit(train_val, train_label,
           validation_split=0.1,
           callbacks=[reduce_lr_loss, earlyStopping])
 ```
+
+
+### Architecture
+![Architecture](/img/self-attention_arch.png) 
