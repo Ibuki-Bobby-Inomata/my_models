@@ -5,6 +5,7 @@ Souce  [Human Activity Recognition from Wearable Sensor Data Using Self-Attentio
 
 ## Sample
 #### Setup model
+You rename the repository `self-attention-HAR` to `model`.
 ```
 from model.run_model import create_model
 
